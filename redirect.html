@@ -5,7 +5,7 @@
     <script>
       $( document ).ready(function() {
         console.log( "ready!" );
-        token = new URL(window.location).hash.split("&")[0].replace("#id_token=","");
+        token = new URL(window.location).hash.split("&")[0].replace("#access_token=","");
         $('span#token').text(token);
       });
       
