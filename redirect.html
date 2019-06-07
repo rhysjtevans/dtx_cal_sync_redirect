@@ -6,7 +6,6 @@
       $( document ).ready(function() {
         console.log( "ready!" );
         var token = new URL(window.location).hash.split("&")[0].replace("#id_token=","");
-        document.getElementById(variable)
         $('#token').value(token);
       });
       
