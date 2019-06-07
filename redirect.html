@@ -1,9 +1,19 @@
 <html>
   <head>
-    <script>alert(window.location);</script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+    
+    <script>
+      $( document ).ready(function() {
+        console.log( "ready!" );
+        var token = new URL(window.location).hash.split("&")[0].replace("#id_token=","");
+        document.getElementById(variable)
+        $('#token').value(token);
+      });
+      
+    </script>
   </head>
   <body>
-    Your id_token is in the address bar
+    Your Token is: <span id="token"></span>
   </body>
 </html>
 
