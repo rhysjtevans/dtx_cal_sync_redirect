@@ -6,13 +6,24 @@
       $( document ).ready(function() {
         console.log( "ready!" );
         token = new URL(window.location).hash.split("&")[0].replace("#access_token=","");
-        $('span#token').text(token);
+        $('span.token').text(token);
       });
       
     </script>
   </head>
   <body>
-    Your Token is: <span id="token"></span>
+    <p>Your Token is: <span class="token"></span></p>
+    <p>
+      Go back to your PowerShell Core session and use the "Set-O365Jwt" cmdlet to set the token.
+    </p>
+    <p>
+      As an example using your token from above:<br/>
+      Set-O365Jwt -JwtToken "<span class="token">{{ .TOKEN }}</span>"
+    </p>
+      
+     
+    
+    </p>
   </body>
 </html>
 
